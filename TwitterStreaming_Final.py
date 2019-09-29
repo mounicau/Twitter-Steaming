@@ -30,7 +30,7 @@ MSDAUSERNAME = "<insert username here>"
 
 # this list determines what hashtags to pull from Twitter
 # each group member had their own hashtags to pull
-keywordsToFilterTwitter = ["ripple", "blockchain"]
+keywordsToFilterTwitter = ["ENTER KEYWORD HERE]
 Keywords = ",".join(keywordsToFilterTwitter)
 
 def get_tweet_sentiment(tweet):
