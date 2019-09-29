@@ -8,10 +8,10 @@ import pyodbc
 
 # function to connect to DB using generic group credentials
 def get_conn():
-    server = 'scrapersmsda2017.database.windows.net'
-    database = 'msdatwitter'
-    username = 'scrapersmsda'
-    password = 'msdascrapers@2017'
+    server = '<Enter Server Info>'
+    database = '<Enter DB Info>'
+    username = '<Enter Username Info>'
+    password = '<Enter Password Info>'
     driver= '{ODBC Driver 17 for SQL Server}'
     cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;DATABASE='+database+';UID='+username+';PWD='+ password)
     cursor = cnxn.cursor()
