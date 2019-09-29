@@ -1,0 +1,54 @@
+--Create sequence for unique identifier
+
+CREATE SEQUENCE Record_ID  
+   START WITH 123456  
+   INCREMENT BY 1 ;  
+GO
+
+--select all the sequences in the database. See the list of sequences available
+SELECT * FROM sys.sequences;
+
+--Select the next value from the sequence created. to be used when inserting the twitter data
+SELECT NEXT VALUE FOR Record_ID AS FirstUse;
+
+--Create a table to store the twitter data.
+
+create table twitterData_modified(
+	RecordID int primary key,
+	MSDAUSERNAME varchar(max) NOT NULL,
+	CreatedAt varchar(max) NOT NULL,
+	TweetID  varchar(max) NOT NULL,
+	TweetMessage varchar(max) NOT NULL,
+	Source varchar(max) NOT NULL,
+	UserID varchar(max) NOT NULL,
+	UserName varchar(max) NOT NULL,
+	UserScreenName varchar(max) NOT NULL,
+	location varchar(max),
+	UserFollowersCount int,
+	UserFriendsCount int,
+	UserListedCount int,
+	UserFavouritesCount int,
+	UserTweetsCount int,
+	AccountCreatedAt Date NOT NULL,
+	Coordinates varchar(max),
+	Place varchar(max),
+	isRetweetedMessage varchar(max),
+	reTweetQuoteCount int,
+	reTweetReplyCount int,
+	reTweetcount int,
+	reTweetFavoriteCount int,
+	isReTweeted varchar(max),
+	isTweetFavorited varchar(max),
+	Polarity varchar(max)
+);
+
+-- Select the data from the twitterData_modified table
+select * 
+from twitterData_modified;
+
+-- Create a crypto tickers table for cypto currency
+
+Create TABLE cryptotickers 
+	(keywords varchar(max) not null, 
+	ticker varchar(max) not null);
+
